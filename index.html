@@ -6,14 +6,13 @@
     <title>Card Tracker</title>
 </head>
 <body>
-    <table BORDER="2" id="cardTable">
-        
-    </table>
+    <table BORDER="2" id="cardTable"></table>
 
     <script>
         const table = document.getElementById("cardTable");
         const ranks = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"];
         const suits = ["S","D","C","H"];
+
         
     
     
@@ -27,7 +26,12 @@
                 nCol.textContent = ranks[rank] + suits[suit];
                 const checkBox = document.createElement("input");
                 checkBox.type = "checkbox";
+                checkBox.id = ranks[rank] + suits[suits] + 1;
                 nCol.appendChild(checkBox);
+                const checkBox2 = document.createElement("input");
+                checkBox2.type = "checkbox";
+                checkBox2.id = ranks[rank] + suits[suits] + 2;
+                nCol.appendChild(checkBox2);
                 nRow.appendChild(nCol);
             };
         };
