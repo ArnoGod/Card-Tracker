@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table BORDER="2" id="cardTable">
+        
+    </table>
+
+    <script>
+        const table = document.getElementById("cardTable");
+        const ranks = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"];
+        const suits = ["S","D","C","H"];
+        
+    
+    
+        for (let rank in ranks) {
+            const nRow = document.createElement("tr");
+            nRow.id = rank;
+            table.appendChild(nRow);
+            for (let suit in suits) {
+                const nCol = document.createElement("td");
+                nCol.id = ranks[rank] + suits[suits];
+                nCol.textContent = ranks[rank] + suits[suit];
+                const checkBox = document.createElement("input");
+                checkBox.type = "checkbox";
+                nCol.appendChild(checkBox);
+                nRow.appendChild(nCol);
+            };
+        };
+    </script>
+</body>
+
+
+
+</html>
